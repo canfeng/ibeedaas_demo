@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE generatorConfiguration PUBLIC   
+"-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+ "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+	<classPathEntry
+		location="D:\work\Repositories\m2\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar" />
+	<context id="context1" targetRuntime="MyBatis3">
+		<commentGenerator>
+			<!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+			<property name="suppressAllComments" value="true" />
+			<!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://172.16.50.115:3306/finmall" userId="mysql" password="123456" />
+		<javaModelGenerator targetPackage="com.finmall.pojo"
+			targetProject="D:\data\melbourne" />
+		<sqlMapGenerator targetPackage="com.finmall.mapper"
+			targetProject="d:\data\melbourne" />
+		<javaClientGenerator targetPackage="com.finmall.mapper"
+			targetProject="d:\data\melbourne" type="XMLMAPPER" />
+			
+		<!-- shema 数据库 tableName表明 -->
+		<table schema="finmall" tableName="user" domainObjectName="User"/>
+
+	</context>
+</generatorConfiguration>
